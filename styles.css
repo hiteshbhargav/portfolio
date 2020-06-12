@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+::-webkit-scrollbar {
+  background-color: white;
+  width: 3px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ad4cda;
+}
+body {
+  background-color: #f4f9f4;
+  font-family: "Poppins", sans-serif;
+  user-select: none;
+}
+.display-4 {
+  color: rgb(110, 110, 110);
+  text-decoration: underline, linear-gradient(to right, #ff00cc, #333399);
+}
+.navbar-nav {
+  margin: 10px auto;
+}
+.nav-item {
+  margin: 0px 30px;
+}
+.nav-item a:hover {
+  border-bottom: 1px solid black;
+}
+.hire-me {
+  background: #4b006e !important;
+  color: #fff !important;
+  font-weight: 600 !important;
+  padding: 5px 10px !important;
+}
+.hire-me:hover {
+  box-shadow: 1px 4px 8px #ad4cda;
+}
+.fa-chevron-down {
+  font-size: 30px !important;
+}
+#intro-main {
+  width: 90%;
+  height: 100vh;
+  margin: auto;
+  position: relative;
+}
+.intro-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-pic {
+  border-radius: 50px;
+  width: 100px;
+}
+.back-to-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 20px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: rgba(153, 153, 153, 0.287);
+  color: black;
+  padding: 10px 18px;
+  border-radius: 4px;
+}
+.back-to-top:hover {
+  color: black;
+}
+#skills {
+  min-height: 500px;
+  margin: 10px;
+  display: flex;
+  width: 90%;
+  display: flex;
+}
+.skills-label {
+  justify-content: space-between;
+  font-size: 24px;
+  padding: 10px 30px;
+  border: none;
+  background: rgba(212, 212, 212, 0.376);
+}
+#projects {
+  margin: 20px 0px;
+  height: auto;
+}
+.project-div {
+  text-align: center;
+  padding: 20px;
+  margin: auto;
+}
+.project-div a {
+  margin: 0px 15px;
+}
+.project-image {
+  width: 100%;
+}
+#cv {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("./resources/images/cvbg.jpg");
+  opacity: 0.8;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  position: relative;
+  transition: all 0.5s ease;
+}
+#cv:hover {
+  opacity: 0.9;
+}
+#cv a {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  opacity: 9 !important;
+  top: 50%;
+  left: 50%;
+  color: #fff;
+  background-color: #035aa6;
+  font-weight: 700 !important;
+  padding: 10px 20px;
+}
+#footer {
+  border-top: 1px solid white;
+  height: 150px;
+  line-height: 70px;
+  width: 75%;
+  margin: auto;
+}
+#footer img {
+  margin: 20px 10px;
+  width: 25px;
+  opacity: 0.6;
+}
+#footer img:hover {
+  opacity: 1;
+}
+@media all and (max-width: 500px) {
+  #cv {
+    height: 40vh;
+  }
+}
