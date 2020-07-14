@@ -5,13 +5,15 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Portfolio</title>
-  <link rel="stylesheet" href="styles.css">
   <!-- bootstrap css -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
   <!-- font awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css">
+  <link rel="stylesheet" href="styles.css">
   <!-- bootstrap scripts  -->
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
     integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
@@ -19,6 +21,13 @@
     crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
     crossorigin="anonymous"></script>
   <!-- animate CSS script -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
@@ -87,10 +96,14 @@
         <p class="display-4 d-flex justify-content-end">Skills</p>
       </div>
       <hr>
-      <label class="skills-label">HTML</label>
+      <!-- <label class="skills-label">HTML</label>
       <label class="skills-label">CSS</label>
       <label class="skills-label">JavaScript</label>
-      <label class="skills-label">Reactjs</label>
+      <label class="skills-label">Reactjs</label> -->
+      <div class="skills-images">
+        <img class="img-fluid" src="htmlcssjs.svg" alt="">
+        <img class="img-fluid" src="react.svg" alt="">
+      </div>
     </div>
   </section>
   <section id="projects">
@@ -124,8 +137,8 @@
     </div>
   </section>
 
-  <section id="cv" class="mb-5"><a
-      href="https://doc-08-3k-docs.googleusercontent.com/docs/securesc/ve7pqrpobiml1be5i9u4qt3vgov8i9b3/pojsnjkpkg9j3d4n6m2m947o881pks42/1590996825000/09087195834888267492/09087195834888267492/1BhMhBRvzNzqzVwXVCgZb0ecej5_K3LtU?e=download&authuser=0"
+  <section id="cv" class="mb-5">
+    <a href="https://doc-08-3k-docs.googleusercontent.com/docs/securesc/ve7pqrpobiml1be5i9u4qt3vgov8i9b3/pojsnjkpkg9j3d4n6m2m947o881pks42/1590996825000/09087195834888267492/09087195834888267492/1BhMhBRvzNzqzVwXVCgZb0ecej5_K3LtU?e=download&authuser=0"
       class="btn btn-primary" download>Download CV</a>
   </section>
   <!-- Projects, projects links, covers -->
@@ -133,15 +146,17 @@
   <footer id="footer" class="text-center border-top">
     <h3 class="text-secondary">Get in touch</h3>
     <!-- <a href="https://t.me/hitesh_bhargav"><i class="fa fa-telegram-plane"></i></a> -->
-    <a href="https://t.me/hitesh_bhargav"><img src="./resources/icons/telegram-plane-brands.svg" alt="telegram-icon" width="30px"></a>
+    <a href="https://t.me/hitesh_bhargav"><img src="./resources/icons/telegram-plane-brands.svg" alt="telegram-icon"
+        width="30px"></a>
 
-    <a href="https://github.com/hiteshbhargav/"><img src="./resources/icons/github-brands.svg" alt="github-icon" width="30px"></a>
+    <a href="https://github.com/hiteshbhargav/"><img src="./resources/icons/github-brands.svg" alt="github-icon"
+        width="30px"></a>
 
     <a href="https://www.linkedin.com/in/hitesh-bhargav-2bb497195/"><img src="./resources/icons/linkedin-in-brands.svg"
         alt="linkedin-icon" width="30px"></a>
 
-    <a href="https://www.instagram.com/hiteshcodes/"><img src="./resources/icons/instagram-brands.svg" alt="instagram-icon"
-        width="30px"></a>
+    <a href="https://www.instagram.com/hiteshcodes/"><img src="./resources/icons/instagram-brands.svg"
+        alt="instagram-icon" width="30px"></a>
   </footer>
   <script src="index.js"></script>
 </body>
