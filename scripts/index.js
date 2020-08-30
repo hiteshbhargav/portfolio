@@ -63,7 +63,7 @@ let projects = [
     name: "Ecommerce website",
     description:
       "Responsive Ecommerce website project using HTML CSS JavaScript and firebase database. Functionality includes Authentication, browse products and add to cart.",
-    img: "./resources/images/projects/ecommerce.png",
+    img: "./resources/images/projects/ecommerce.PNG",
     live: "https://hiteshbhargav.github.io/E-commerce/",
     source: "https://github.com/hiteshbhargav/E-commerce",
   },
@@ -72,7 +72,7 @@ let projects = [
     name: "Form Validation",
     description:
       "A simple register with us form using html css and vanilla javascript. It also includes validations checks at several input fields",
-    img: "./resources/images/projects/formProject.png",
+    img: "./resources/images/projects/formProject.PNG",
     live: "https://hiteshbhargav.github.io/formValidation/",
     source: "https://github.com/hiteshbhargav/formValidation",
   },
