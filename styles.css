@@ -14,10 +14,13 @@ html {
   background-color: #ad4cda;
 }
 body {
-  background-color: #f4f9f4;
+  /* background-color: #f4f9f4; */
+  background-color: #f2f7f5;
   font-family: "Poppins", sans-serif;
-  user-select: none;
+  font-size: 1.2rem;
+  line-height: 1.7;
 }
+
 .display-4 {
   color: rgb(110, 110, 110);
   text-decoration: underline, linear-gradient(to right, #ff00cc, #333399);
@@ -31,23 +34,18 @@ body {
 .nav-item a:hover {
   border-bottom: 1px solid black;
 }
-/* .hire-me {
-  background: #4b006e ;
-  color: #fff ;
-  font-weight: 600 ;
-  padding: 5px 10px ;
-} */
 .hire-me {
-  background: #6807f9;
-  color: #c299fc;
+  color: #2e5faf;
+  background: #dfe2fe;
   font-weight: 600;
   padding: 5px 15px !important;
 }
+
 .hire-me:hover {
-  box-shadow: 1px 4px 8px #ad4cda;
-  color: #ebeafd;
+  box-shadow: 0px 2px 9px #ad4cda;
   border-bottom: none !important;
 }
+
 .fa-chevron-down {
   font-size: 30px;
 }
@@ -61,6 +59,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: justify;
 }
 .profile-pic {
   border-radius: 50px;
@@ -87,11 +86,12 @@ body {
 }
 #skills {
   min-height: 500px;
-  margin: 10px;
+  margin: 60px auto;
   display: flex;
-  width: 90%;
+  width: 100%;
   display: flex;
 }
+
 .skills-label {
   justify-content: space-between;
   font-size: 24px;
@@ -99,13 +99,17 @@ body {
   border: none;
   background: rgba(212, 212, 212, 0.376);
 }
-.skills-images {
-  width: 50%;
-  display: inline-flex;
-  margin: auto;
+
+.skills-content {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 80px auto;
+  font-size: 1.5rem;
+  line-height: 3rem !important;
 }
-.skills-images{
-  width: 50%;
+.skills-content ul {
+  list-style-type: none;
 }
 #projects {
   margin: 20px 0px;
@@ -121,6 +125,23 @@ body {
 }
 .project-image {
   width: 100%;
+}
+.view-live {
+  background: #033eff1c;
+  color: #033fff;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+}
+.view-source,
+.view-live {
+  text-decoration: none;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  border: 1px solid rgba(0, 0, 0, 0.301);
 }
 #cv {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
@@ -144,8 +165,8 @@ body {
   top: 50%;
   left: 50%;
   background: #6807f9;
-  color: #c299fc;
-  font-weight: 500;
+  color: #e7d8fc;
+  font-weight: 600;
   padding: 5px 20px !important;
   border: none;
 }
@@ -179,5 +200,8 @@ body {
   .skills-images {
     width: 70%;
     margin: auto;
+  }
+  .skills-content {
+    display: block;
   }
 }
