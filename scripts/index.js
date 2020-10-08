@@ -45,13 +45,13 @@ let skills2 = [
 ];
 skills1.map((s) => {
   let html = `
-  <li> <img src="../resources/icons/check.svg" class="m-2" alt="tick-icon" width="24px">${s}</li>
+  <li> <img src="./resources/icons/check.svg" class="m-2" alt="tick-icon" width="24px">${s}</li>
   `;
   document.querySelector(".skills1").innerHTML += html;
 });
 skills2.map((s) => {
   let html = `
-  <li> <img src="../resources/icons/check.svg" class="m-2" alt="tick-icon" width="24px">${s}</li>
+  <li> <img src="./resources/icons/check.svg" class="m-2" alt="tick-icon" width="24px">${s}</li>
   `;
   document.querySelector(".skills2").innerHTML += html;
 });
