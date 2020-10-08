@@ -12,14 +12,14 @@ function scrollFunction() {
 }
 //----------intro----------
 let intro = {
-  name: "I am Hitesh Bhargav",
+  name: "I am Hitesh",
   about: "Self taught Web Developer",
   description:
     "I have always been passionate about computers and electronic gadgets, i love exploring and playing around with technology. As a front-end Developer I like to code things from scratch, and enjoy bringing ideas to life in the browser. You can view some of my personal projects i have been working on through out my journey, for more visit my github.",
 };
 let html = `
     <div>
-      <h2 class="name animate__animated animate__bounce">${intro.name}</h2>
+      <p class="name text-dark animate__animated animate__bounce display-2">${intro.name}</p>
       <p class="border-bottom">${intro.about}</p>
       <p class="mt-4">
         ${intro.description}
@@ -38,20 +38,20 @@ let skills1 = [
 ];
 let skills2 = [
   "JavaScript",
-  "Beginner React Js",
+  "React Js",
   "Beginner Node Js",
   "Git",
   "Firebase",
 ];
 skills1.map((s) => {
   let html = `
-  <li> <img src="./check.svg" alt="tick-icon" width="24px">${s}</li>
+  <li> <img src="../resources/icons/check.svg" class="m-2" alt="tick-icon" width="24px">${s}</li>
   `;
   document.querySelector(".skills1").innerHTML += html;
 });
 skills2.map((s) => {
   let html = `
-  <li> <img src="./check.svg" alt="tick-icon" width="24px">${s}</li>
+  <li> <img src="../resources/icons/check.svg" class="m-2" alt="tick-icon" width="24px">${s}</li>
   `;
   document.querySelector(".skills2").innerHTML += html;
 });
@@ -113,3 +113,57 @@ projects.map((p) => {
 });
 
 //----------github api----------
+const api = "https://api.github.com/users/";
+const getUser = async (username) => {
+  const fetchApi = await fetch(api + username);
+  const data = await fetchApi.json();
+  const dataObj = {
+    avatar: data.avatar_url,
+    name: data.login,
+    bio: data.bio,
+    followers: data.followers,
+    following: data.following,
+    profileUrl: data.url,
+    location: data.location,
+    repos: data.repos_url,
+    reposCount: data.public_repos,
+  };
+  const repos = await fetch(api + username + "/repos");
+  const reposData = await repos.json();
+  const repoResult = reposData.map((repo) => repo.name);
+
+  // main content
+  const html = `
+      <div class="content card-body d-flex row m-3">
+        <div class="profile-picture col-lg-2 col-md-3 ">
+          <img class="rounded-circle" src="${dataObj.avatar}"
+          alt="profile-pic" width="150px">
+        </div>
+        <div class="content-child col-lg-10 col-md-9  mt-3">
+          <h4 class="card-title"><a href="https://github.com/hiteshbhargav" target="_blank">${dataObj.name}</a></h4>
+          <pre>${dataObj.bio}</pre>
+          <small><strong class="text-secondary">${dataObj.location}</strong></small>
+          <ul class="list-group list-group-horizontal row">
+            <li style="border: none;" class="list-group-item col"><b>${dataObj.followers} </b>Followers</li>
+            <li style="border: none;" class="list-group-item col"><b>${dataObj.following} </b>Following</li>
+            <li style="border: none;" class="list-group-item col"><b>${dataObj.reposCount} </b>Repos</li>
+          </ul>
+          <div class="repos mt-4 mb-4">
+            <!-- script -->
+          </div>
+         <!-- <a href="https://github.com/hiteshbhargav" class="visit-profile" target="_blank" title="visit-profile">Visit Profile</a> -->
+        </div>  
+      </div>
+  `;
+
+  document.querySelector(".card").innerHTML = html;
+
+  // show repositories
+  repoResult.map((rep) => {
+    let repohtml = `
+    <span class="repos-list"> <a href="https://github.com/hiteshbhargav/${rep}" target=_blank>${rep}</a></span>
+    `;
+    document.querySelector(".repos").innerHTML += repohtml;
+  });
+};
+getUser("hiteshbhargav");
