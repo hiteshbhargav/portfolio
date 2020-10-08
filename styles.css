@@ -263,6 +263,9 @@ body {
 
 /* for mobile only */
 @media (max-width: 599px) {
+  #intro-main{
+    margin-top: 10px;
+  }
   #cv {
     height: 30vh;
   }
